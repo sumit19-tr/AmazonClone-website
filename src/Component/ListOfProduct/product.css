@@ -1,0 +1,26 @@
+.MobilesPage
+{
+    height: fit-content;
+}
+.Allmobilefilter
+{
+    height: fit-content;
+}
+.Mobiles
+{
+    height: fit-content;
+}
+.Mobiles img
+{
+    height: 10px;
+    width: 70%;
+}
+.card-title:hover
+{
+    text-decoration: underline;
+    color: #c45500!important;
+}
+.Mouse-hover:hover{
+    text-decoration: underline;
+    color: #c45500!important;
+}

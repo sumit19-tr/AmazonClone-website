@@ -1,0 +1,168 @@
+.forHome
+{
+    height: 545px;
+    width: 100%;
+}
+.Content
+{
+    height: 400px;
+    width: 100%;
+    
+    position: absolute;
+    margin-top: -335px;
+}
+.Content1{
+    float: left;
+    background-color: whitesmoke;
+}
+.Content1 a
+{
+    margin-left: 21px;
+}
+.Content .forHome
+{
+    height: 241px;
+    width: 288px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-left: 1%;
+}
+.forHome h3
+{
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+    margin-left: 2%;
+    margin-top: 18px;
+    padding-bottom: 8px;
+}
+.forHome img
+{
+    height: 64%;
+    width: 42%;
+    margin-left: 2%;
+    margin-top: -1%;
+}
+
+.Content .amazonbrands
+{
+    height: 266px;
+    width: 288px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.amazonbrands h3
+{
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+    margin-top: 18px;
+    padding-bottom: 8px;
+}
+.amazonbrands img
+{
+    height: 83px;
+    width: 116px;
+    padding: 2px;
+}
+
+.Content .woman
+{
+    height: 309px;
+    width: 334px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.woman h3
+{
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+    margin-top: 18px;
+    padding-bottom: 8px;
+}
+.woman img
+{
+    height: 38%;
+    width: 46%;
+    padding: 2px;
+}
+
+.Content .login
+{
+    height: 124px;
+    width: 354px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.login h3
+{
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+    
+    margin-left: 20px;
+    margin-top: 18px;
+    padding-bottom: 8px;
+}
+.login img
+{
+    height: 156px;
+    width: 249px;
+    margin-left: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 50%;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+.viewed
+{
+    height: 240px;;
+    width: auto;
+    margin: 30px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: white;
+}
+.viewed1
+{
+    height: 286px;;
+    width: max-content;
+    margin-right: 32px;
+    background-color: white;
+}
+.viewed h3
+{
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+    margin-left: 20px;
+    margin-top: -13px;
+}
+
+.viewed .product
+{
+    height: 191px;
+    width: 220px;
+    margin: 10px 0 13px 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-grid;
+    background-color: white;
+}

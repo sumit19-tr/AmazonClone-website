@@ -1,0 +1,53 @@
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 50%;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+.viewed
+{
+    height: 240px;;
+    width: auto;
+    margin: 30px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: white;
+}
+.viewed1
+{
+    height: 286px;;
+    width: max-content;
+    margin-right: 32px;
+    background-color: white;
+}
+.viewed h3
+{
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+    margin-left: 20px;
+    margin-top: -13px;
+}
+  
+
+.viewed .product
+{
+    height: 191px;
+    width: 220px;
+    margin: 10px 0 13px 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-grid;
+    background-color: white;
+}

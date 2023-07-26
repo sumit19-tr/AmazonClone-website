@@ -1,0 +1,52 @@
+.backtotop button
+{
+    height: 40px;
+    width: 100%;
+    background-color: #232222;
+    text-decoration: none;
+    line-height: 35px;
+    font-size: 15px;
+    color: aliceblue;
+    
+}
+.backtotop button:hover
+{
+    opacity: 0.9;
+}
+.footer
+{
+    height: 260px;
+    width: 100%;
+    background-color: black
+}
+.footer1
+{
+    height: fit-content;
+    width: fit-content;
+    margin-right: 125px;
+    margin-top: 50px;
+    float: left;
+}
+.footer1 .heading h2
+{
+    height: 30px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+.footer1 .list 
+{
+    height: auto;
+    width: 200px;
+}
+li 
+{
+    list-style-type: none;
+}
+.footer1 .list a
+{
+    font-size: initial;
+    margin-left: -14px;
+    color: #f1f1f1;
+}

@@ -1,0 +1,21 @@
+.gradient-custom {
+  
+  background: #6a11cb;
+  
+  background: #6a11cb;
+    background: linear-gradient(to right, rgb(230 230 230), rgb(133 135 138));
+}
+
+.btn-plus-minus {
+  
+    height: 2.5rem;
+
+}
+
+input#form1 {
+  width: 4rem;
+}
+
+.btn-plus-minus i {
+  font-size: 12px; 
+}

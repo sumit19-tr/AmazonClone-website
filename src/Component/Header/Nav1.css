@@ -1,0 +1,532 @@
+body {
+    margin: 0;
+
+}
+
+.divv1 {
+    border: 2px solid black;
+    width: 100%;
+    height: 60px;
+    list-style-type: none;
+    display: flex;
+    background-color: #131921;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-family: Arial, sans-serif;
+}
+
+.N1 {
+    border: 1px solid #131921;
+    ;
+    width: 130px;
+    height: 49px;
+    margin-left: 12px;
+    margin: 2px 0px 0px -9px;
+    position: absolute;
+}
+
+.N2:hover {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 2%;
+}
+
+.N4:hover .language {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 2%;
+    display: block;
+}
+
+.language {
+    position: absolute;
+    height: 333px;
+    width: 244px;
+    top: 55px;
+    left: -12.5%;
+    background-color: white;
+    z-index: 1;
+    display: none;
+}
+
+.language input {
+    margin-top: 14px;
+    margin-left: 14px;
+}
+
+.language input:hover {
+    color: #ffb123;
+}
+
+.language a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.language a label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 00;
+}
+
+.language a:hover {
+    color: orange;
+    text-decoration: underline;
+    font-weight: lighter;
+}
+
+
+.N5:hover {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 2%;
+}
+
+.N6:hover {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 2%;
+}
+
+.N7:hover {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 2%;
+}
+
+.N1 img {
+    height: 57px;
+    width: 106px;
+    padding: 9px;
+    padding-top: 13px;
+}
+
+.in {
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 98px;
+}
+
+.N2 {
+    border: 1px solid #131921;
+    width: 173px;
+    height: 49px;
+    position: absolute;
+    margin: 2px 0px 0px 121px;
+}
+
+.N2 img {
+    height: 50px;
+    width: 38px;
+    padding: 8px;
+    padding-top: 13px;
+}
+
+.N2 .in2 {
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 35px;
+}
+
+.N2 .in2 span {
+    font-size: 14px;
+    color: rgb(228, 228, 228);
+    position: absolute;
+    top: 3px;
+    left: 2px;
+}
+
+.N2 .in2 {
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 32px;
+}
+
+.N2 .in2 span {
+    font-size: 14px;
+    color: rgb(228, 228, 228);
+    position: absolute;
+    top: 3px;
+    left: 2px;
+}
+
+.N2 .in2 address {
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    width: 143px;
+    top: 18px;
+    left: 2px;
+}
+
+.N5 .in2 {
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 11px;
+}
+
+.N5 .in2 span {
+    font-size: 14px;
+    color: rgb(228, 228, 228);
+}
+
+.N5 .in2 span {
+    font-size: 15px;
+    width: 111px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 13px;
+    left: -6px;
+}
+
+.N6 .in2 small {
+    color: white;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-left: 7px;
+    position: absolute;
+}
+
+.N6 .in2 span {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-top: 4px;
+    position: absolute;
+}
+
+.N4 .arro {
+    font-size: 10px;
+    color: #aca9a9;
+    font-weight: bold;
+    position: absolute;
+    top: 22px;
+    left: 54px;
+}
+
+.N5 .in2 .arrow {
+    font-size: 10px;
+    color: #aca9a9;
+    font-weight: bold;
+    position: absolute;
+    top: 21px;
+    left: 103px;
+}
+
+.N5 small {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: -5px;
+    width: 71px;
+}
+
+.N3 {
+    border: 4px solid #131921;
+    width: auto;
+    height: 45px;
+    margin: 6px 0px 0px 16px;
+    border-radius: 11px 8px 6px 10px;
+    position: absolute;
+    left: 313px;
+}
+
+.N3 select {
+    background-color: rgb(230, 230, 230);
+    height: 39px;
+    border-radius: 0px 0px 0px 5px;
+    font-size: 16px;
+}
+
+.N3 select:focus {
+    position: relative;
+}
+
+.Borderpx {
+    border: 4px solid #ffb123;
+}
+
+select:hover {
+    opacity: 0.9;
+}
+
+.N3 select:focus {
+    min-width: 20px;
+}
+
+.N3 select option {
+    background-color: white;
+}
+
+.N3 input {
+    background-color: whitesmoke;
+    width: 374px;
+    border: none;
+    height: 36px;
+    margin-left: -4px;
+    margin-right: 4px;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+.btn1 {
+    width: 49px;
+    height: 40px;
+    margin-left: -8px;
+    background-color: #ffb123;
+    border: none;
+    border-radius: 0px 5px 0px 0px;
+}
+
+.btn1:hover {
+    opacity: 0.9;
+}
+
+.btn1 i {
+    height: 10px;
+}
+
+.N4 {
+    border: 1px solid #131921;
+    background-color: #131921;
+    width: 84px;
+    height: 49px;
+    margin: 2px 0px 0px 965px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.logout-button {
+    border: 1px solid #131921;
+    width: 84px;
+    height: 49px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+
+.N4 img {
+    margin-top: 18px;
+    margin-left: 6px;
+}
+
+.N4 span {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 5px;
+    position: absolute;
+    top: 15px;
+
+}
+
+.N5 {
+    border: 1px solid #131921;
+    width: 80px;
+    height: 49px;
+    margin-left: 12px;
+    margin: 2px 0px 0px 883px;
+    position: absolute;
+}
+
+.N6 {
+    border: 1px solid #131921;
+    ;
+    width: 74px;
+    height: 49px;
+    margin: 2px 0px 0px 1059px;
+    position: absolute;
+}
+
+.N7 {
+    border: 1px solid #131921;
+    ;
+    width: 88px;
+    height: 49px;
+    margin: 2px 0px 0px 1136px;
+    position: absolute;
+}
+
+.N7 img {
+    height: 30px;
+    width: 33px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.N7 .cart {
+    color: white;
+    margin-left: 43px;
+    margin-top: -25px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.N7 span {
+    color: orange;
+    position: absolute;
+    left: 21px;
+    top: 4px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+body {
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-family: Arial, sans-serif;
+}
+
+.onTop {
+    height: 70px;
+    width: 100%;
+    background-color: black;
+}
+
+.onTop ul {
+    padding-left: 77px;
+    margin-top: -1px;
+}
+
+.onTop li {
+    float: left;
+    padding: 7px 17px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.onTop ul :hover {
+    border-bottom: 2px solid white;
+}
+
+.onTop li a {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.onTop select {
+    height: 45px;
+    width: 45px;
+    font-family: Unbounded, cursive;
+    font-size: smaller;
+    margin-right: -5px;
+    padding-bottom: 2px;
+}
+
+.onTop input {
+    height: 44px;
+    width: 400px;
+    font-family: 'Unbounded', cursive;
+    font-size: smaller;
+    border: none;
+}
+
+.onTop .searchbtn {
+    height: 43px;
+    font-family: 'Unbounded', cursive;
+    font-size: smaller;
+    width: 53px;
+    padding-bottom: 31px;
+    padding-top: 13px;
+    margin-left: -9px;
+    background-color: #eec881;
+    border-radius: 0px 8px 8px 0px;
+    border: none;
+}
+
+
+.cart img {
+    height: 27px;
+    width: 35px;
+    font-weight: normal;
+}
+
+.select1 {
+    padding-top: 2px;
+    margin-bottom: -18px;
+    background-color: lightgray;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.searchbar button img {
+    height: 21px;
+    width: 24px;
+}
+
+.searchbar button {
+    margin-top: 2px;
+}
+
+.searchbar {
+    padding: 0px;
+}
+
+*/ .amazonlogo img {
+    height: 33px;
+    width: 106px;
+}
+
+.DarkModeBtn {
+    height: 44px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    color: whitesmoke;
+    background-color: black;
+    margin-top: -9px;
+}
+
+.searchBarCopy{
+    height: 366px;
+    width: 35.5rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.searchBar-display {
+    height: 309px;
+    width: 77%;
+    float: right;
+    background-color: whitesmoke;
+
+}
+
+.searchbar-result {
+    height: 309px;
+    
+    display: flex;
+    flex-flow: column;
+    overflow-y: scroll;
+}
+
+
+a.searchbar-result-list {
+    color: black;
+    font-size:15px;
+    margin: 0rem 0.11rem;
+    padding: 0.4rem 0.6rem;
+}
+
+a.searchbar-result-list:hover {
+    
+    background-color: #aca9a9;
+    color: black;
+    
+}
