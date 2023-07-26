@@ -86,6 +86,28 @@ const ContentSection1 = (props) => {
             )
         }
     }
+
+    const handleClick2 = () => {
+        history.push('/login');
+    }
+
+    const renderLoginContent = () => {
+        if(!sessionStorage.getItem('ltk')){
+            return(
+                <>
+                    <div className="login Content1">
+                    <h3> Sign in for your best <br />experience </h3>
+                    <button className="btn btn-warning ms-4 w-75 fs-6 fw-bold"onClick={handleClick2}>Sign in securely</button>
+                    </div>
+                </>
+            )
+        }
+        else{
+            <div>
+
+            </div>
+        }
+    }
     
 
     return (
@@ -110,11 +132,8 @@ const ContentSection1 = (props) => {
 
                     <Link to="/products/3"> see more</Link>
                 </div>
-
-                <div className="login Content1">
-                    <h3> Sign in for your best <br />experience </h3>
-                    <button className="btn btn-warning ms-4 w-75 fs-6 fw-bold">Sign in securely</button>
-                </div>
+                {renderLoginContent()}
+                
 
             </section>
         </>

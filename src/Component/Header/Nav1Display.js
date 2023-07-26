@@ -52,6 +52,8 @@ const Nav1Display = (props) => {
             let data = userData.name;
             sessionStorage.setItem("loginStatus", "loggedIn");
             sessionStorage.setItem("userInfo", data);
+            const fullName = userData.name;
+            const firstName = fullName.split(" ")[0];
             return (
                 <>
                     <li className="N4">
@@ -64,7 +66,7 @@ const Nav1Display = (props) => {
                     <li className="N5" >
                         <Link to="/login">
                             <div className="in2">
-                                <small>Hello,</small><br /><br /><span>{userData.name}</span>
+                                <small>Hello,</small><br /><br /><span className="pt-1">&nbsp;&nbsp;&nbsp;&nbsp;{firstName}</span>
                             </div>
                         </Link>
                     </li>
