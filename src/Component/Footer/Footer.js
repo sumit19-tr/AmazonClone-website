@@ -19,10 +19,10 @@ const Footer = () => {
                         </div>
                         <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
                             <div className="d-flex justify-content-center">
-                                <a href="https://www.linkedin.com/in/sumit-mehra-76484a131/" target="_blank" className="me-4">
+                                <a href="https://www.linkedin.com/in/sumit-mehra-76484a131/" target="_blank" rel="noopener noreferrer" className="me-4">
                                     <i className="fab fa-linkedin" style={{ fontSize: "32px" }}></i>
                                 </a>
-                                <a href="https://github.com/sumit19-tr" target="_blank">
+                                <a href="https://github.com/sumit19-tr" target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-github" style={{ fontSize: "32px" }}></i>
                                 </a>
                             </div>
