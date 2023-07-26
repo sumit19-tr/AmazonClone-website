@@ -23,9 +23,9 @@ class ViewOrder extends Component {
         )
     }
 
-    shouldComponentUpdate(prevState){
+    shouldComponentUpdate(){
         let prevStateC = sessionStorage.getItem('re-count');
-        if(prevStateC!=this.state.rerenderCount)
+        if(prevStateC!==this.state.rerenderCount)
         {
             axios.get(viewOrderUrl).then((res) => { this.setState({ 
                 orders: res.data ,

@@ -21,9 +21,10 @@ const BestSellersSection = (props) => {
                     const id = item.productId;
 
                     return (
-                        <>
-                            <div key={item.id} onClick={() => handleClick(id)} className="product" style={{ backgroundImage: `url(${item.Image})`}}></div>
-                        </>
+                        
+
+                            <div key={item._id} onClick={() => handleClick(id)} className="product" style={{ backgroundImage: `url(${item.Image})`}}></div>
+                        
                     )
                 })
             }

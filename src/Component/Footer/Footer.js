@@ -30,11 +30,13 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
+
             <div className="backtotop c3">
                 <center>
                     <button onClick={handleScroll}>Back to top</button>
                 </center>
             </div>
+
             <footer className="footer bg-dark text-center text-lg-start">
                 <div className="container p-4">
                     <div className="row">
@@ -44,10 +46,10 @@ const Footer = () => {
                             </article>
                             <article className="list">
                                 <ul>
-                                    <li><Link to="">About Us</Link></li>
-                                    <li><Link to="">Careers</Link></li>
-                                    <li><Link to="">Press Releases</Link></li>
-                                    <li><Link to="">Amazon Science</Link></li>
+                                    <li><Link to="" className="text-white">About Us</Link></li>
+                                    <li><Link to="" className="text-white">Careers</Link></li>
+                                    <li><Link to="" className="text-white">Press Releases</Link></li>
+                                    <li><Link to="" className="text-white">Amazon Science</Link></li>
                                 </ul>
                             </article>
                         </div>
@@ -57,9 +59,9 @@ const Footer = () => {
                             </article>
                             <article className="list">
                                 <ul>
-                                    <li><Link to="">Facebook</Link></li>
-                                    <li><Link to="">Twitter</Link></li>
-                                    <li><Link to="">Instagram</Link></li>
+                                    <li><Link to="" className="text-white">Facebook</Link></li>
+                                    <li><Link to="" className="text-white">Twitter</Link></li>
+                                    <li><Link to="" className="text-white">Instagram</Link></li>
                                 </ul>
                             </article>
                         </div>
@@ -69,11 +71,11 @@ const Footer = () => {
                             </article>
                             <article className="list">
                                 <ul>
-                                    <li><Link to="">Your Account</Link></li>
-                                    <li><Link to="">Returns</Link></li>
-                                    <li><Link to="">Amazon App Download</Link></li>
-                                    <li><Link to="">Amazon Assistant</Link></li>
-                                    <li><Link to="">Help</Link></li>
+                                    <li><Link to="" className="text-white">Your Account</Link></li>
+                                    <li><Link to="" className="text-white">Returns</Link></li>
+                                    <li><Link to="" className="text-white">Amazon App Download</Link></li>
+                                    <li><Link to="" className="text-white">Amazon Assistant</Link></li>
+                                    <li><Link to="" className="text-white">Help</Link></li>
                                 </ul>
                             </article>
                         </div>

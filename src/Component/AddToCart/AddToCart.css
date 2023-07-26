@@ -1,9 +1,5 @@
 .gradient-custom {
-  
-  background: #6a11cb;
-  
-  background: #6a11cb;
-    background: linear-gradient(to right, rgb(230 230 230), rgb(133 135 138));
+  background: linear-gradient(to right, rgb(230, 230, 230), rgb(133, 135, 138));
 }
 
 .btn-plus-minus {

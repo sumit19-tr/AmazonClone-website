@@ -52,9 +52,4 @@ const DisplayProduct = (props) => {
     )
 }
 
-
-
 export default DisplayProduct;
-
-
-

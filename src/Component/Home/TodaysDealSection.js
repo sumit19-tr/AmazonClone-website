@@ -21,9 +21,9 @@ const TodaysDealSection = (props) => {
                     const id = item.productId;
 
                     return (
-                        <>
+                        
                             <div key={id} onClick={() => handleClick(id)} className="product" style={{ backgroundImage: `url(${item.Image})` }}></div>
-                        </>
+                        
                     )
                 })
             }

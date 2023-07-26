@@ -13,118 +13,80 @@ const ContentSection1 = (props) => {
     }
 
     const renderTopPicksFromMobiles = ({ topPicksFromMobiles }) => {
-
         if (topPicksFromMobiles) {
-
             if (topPicksFromMobiles.length > 0) {
-
                 return topPicksFromMobiles.map((item) => {
-
                     const id = item.productId;
-
                     return (
-                        <>
-                            <img key={item.id} style={{ cursor: 'pointer' }} onClick={() => handleClick(id)} src={item.Image} alt="imag" ></img>
-                        </>
+                        <img key={id} style={{ cursor: 'pointer' }} onClick={() => handleClick(id)} src={item.Image} alt="imag" />
                     )
                 })
-            }
-
-            else {
+            } else {
                 return (
                     <div className="col-6 text-center text-muted">
                         <h3>No Data Found</h3>
                     </div>
                 )
             }
-
-        }
-
-        else {
+        } else {
             return (
                 <div>
                     <div className="spinner-border text-warning"></div>
                 </div>
             )
         }
-
     }
-
+    
     const renderToprated = ({ Toprated }) => {
-
         if (Toprated) {
-
             if (Toprated.length > 0) {
-
                 return Toprated.map((item) => {
-
                     const id = item.productId;
-
                     return (
-                        <>
-                            <img key={item._id} style={{ cursor: 'pointer' }} onClick={() => handleClick(id)} src={item.Image} alt="imag" ></img>
-                        </>
+                            <img key={id} style={{ cursor: 'pointer' }} onClick={() => handleClick(id)} src={item.Image} alt="imag" />
                     )
                 })
-            }
-
-            else {
+            } else {
                 return (
                     <div className="col-6 text-center text-muted">
                         <h3>No Data Found</h3>
                     </div>
                 )
             }
-
-        }
-
-        else {
+        } else {
             return (
                 <div>
-                    <div  className="spinner-border text-warning"></div>
+                    <div className="spinner-border text-warning"></div>
                 </div>
             )
         }
-
     }
-
+    
     const renderMenFashionDis = ({ MenFashionDisc5080 }) => {
-
         if (MenFashionDisc5080) {
-
             if (MenFashionDisc5080.length > 0) {
-
                 return MenFashionDisc5080.map((item) => {
-
                     const id = item.productId;
-
                     return (
-                        <>
-                            <img key={item._id} style={{ cursor: 'pointer' }} onClick={() => handleClick(id)} src={item.Image} alt="imag" ></img>
-                        </>
+                            <img key={id} style={{ cursor: 'pointer' }} onClick={() => handleClick(id)} src={item.Image} alt="imag" />
                     )
                 })
-            }
-
-            else {
+            } else {
                 return (
                     <div className="col-6 text-center text-muted">
                         <h5>No Data Found</h5>
                     </div>
                 )
             }
-
-        }
-
-        else {
+        } else {
             return (
                 <div>
                     <div className="spinner-border text-warning"></div>
                 </div>
             )
         }
-
     }
+    
 
     return (
         <>

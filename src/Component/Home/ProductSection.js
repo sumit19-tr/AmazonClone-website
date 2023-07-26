@@ -22,13 +22,13 @@ const ProductSection = (props) => {
                     const id = item.productId;
 
                     return (
-                        <>
+                        
                             <div 
                             key={item.productId} 
                             className="product" 
                             onClick={() => handleClick(id)} 
                             style={{ backgroundImage: `url(${item.Image})`}}></div>
-                        </>
+                        
                     )
                 })
             }
@@ -66,10 +66,5 @@ const ProductSection = (props) => {
     )
 
 }
-
-
-
-
-
 
 export default ProductSection

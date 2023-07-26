@@ -47,7 +47,7 @@ class OrderFor extends Component {
             else {
                 return (
                     <div>
-                        <img className="" src="https://i.ibb.co/3Rr2X07/no-Data-Found.png" alt="no data" style={{ height: '100%', width: '132%' }}></img>
+                        <img className="" src="https://i.ibb.co/3Rr2X07/no-Data-Found.png" alt="no data" style={{ height: '100%', width: '132%' }}/>
                     </div>
                 )
             }

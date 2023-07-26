@@ -98,8 +98,6 @@ const Home = () => {
             <BestSellersSection bestseller={Bestseller}/>
             <ProductSection Sportsandfitness={Sportsandfitness}/>
         </>
-    )
-
-    
+    )  
 }
 export default Home;

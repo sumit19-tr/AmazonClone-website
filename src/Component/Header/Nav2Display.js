@@ -7,11 +7,11 @@ const Nav2Display = (props) => {
         if (catgData) {
             return catgData.map((item) => {
                 return (
-                    <>
+                    
                         <li key={item._id}>
                             <Link to={`/products/${item.id}`} >{item.category} </Link>
                         </li>
-                    </>
+                    
                 )
             })
         }
