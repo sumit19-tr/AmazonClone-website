@@ -10,7 +10,7 @@ const DisplayProduct = (props) => {
                     return (
                         <Link to={`/details?id=${item.productId}`} className="text-decoration-none text-dark" key={item._id}>
                             <div className="card shadow ms-2 mt-4 " style={{ width: '286px' }} key={item._id}>
-                                <img className="card-img-top rounded mx-auto mt-5 img-responsive" src={item.Image} alt="Redmi A1_blue" />
+                                <img className="card-img-top rounded mx-auto mt-5 w-75" src={item.Image} alt="Redmi A1_blue" />
                                 <div className="card-body">
                                     <h5 className="card-title text-capitalize">{item.content}</h5>
                                     <div className="cart-text fs-5 fw-bold ">
