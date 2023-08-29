@@ -60,7 +60,7 @@ const Nav2Display = (props) => {
     }
 
     return (
-        <nav>
+        <nav className="nav-2">
             <ul>
                 {listCatg(props)}
             </ul>

@@ -1,4 +1,5 @@
 import axios from "axios";
+import './Nav1.css';
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useHistory } from 'react-router-dom';
 import MyContext from "../MyContext";
@@ -47,6 +48,10 @@ const Nav1Display = (props) => {
         this.props.history.push('/');
     }
 
+    const capitalizeFirstLetter = (str) => {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
     const conditionalHeader = () => {
         if (userData.name) {
             let data = userData.name;
@@ -54,20 +59,25 @@ const Nav1Display = (props) => {
             sessionStorage.setItem("userInfo", data);
             const fullName = userData.name;
             const firstName = fullName.split(" ")[0];
+            const capitalized = capitalizeFirstLetter(firstName)
             return (
                 <>
-                    <li className="N4">
-                        <Link to="/register">
-                            <button className="logout-button" onClick={handleLogout}>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/register" tabIndex={-1} aria-disabled="true">
+                            <button className="logout-button pb-2" onClick={handleLogout}>
                                 Log Out
                             </button>
                         </Link>
                     </li>
-                    <li className="N5" >
-                        <Link to="/login">
-                            <div className="in2">
-                                <small>Hello,</small><br /><br /><span className="pt-1">&nbsp;&nbsp;&nbsp;&nbsp;{firstName}</span>
-                            </div>
+                    <li className="nav-item">
+                        <Link className="" to="/login" tabIndex={-1} aria-disabled="true">
+                            <button
+                                className="logout-button pt-2 pb-1"
+                            >
+                                Hello,
+                                <br />
+                                &nbsp;&nbsp;&nbsp;{capitalized}
+                            </button>
                         </Link>
                     </li>
                 </>
@@ -76,18 +86,22 @@ const Nav1Display = (props) => {
         else {
             return (
                 <>
-                    <li className="N4"  >
-                        <Link to="/register">
-                            <button className="logout-button" onClick={handleLogout}>
-                                Register
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/register" tabIndex={-1} aria-disabled="true">
+                            <button className="logout-button pb-2" onClick={handleLogout}>
+                            Register
                             </button>
                         </Link>
                     </li>
-                    <li className="N5" >
-                        <Link to="/login">
-                            <div className="in2">
-                                <small>Hello,</small><br /><span>sign in</span>
-                            </div>
+                    <li className="nav-item">
+                        <Link className="" to="/login" tabIndex={-1} aria-disabled="true">
+                            <button
+                                className="logout-button pt-2 pb-1"
+                            >
+                                Hello,
+                                <br />
+                                &nbsp;&nbsp;&nbsp;sign in
+                            </button>
                         </Link>
                     </li>
                 </>
@@ -155,24 +169,70 @@ const Nav1Display = (props) => {
 
     return (
         <>
-            <ul className='divv1'>
-                <li className="N1"><Link to="/"><div className='position-absolute'><img src="https://i.ibb.co/RQ8X7W6/amazon-logo.png" alt="" ></img></div><div className="in" >in</div></Link></li>
-                <li className="N2"><Link to=""><img src="https://i.ibb.co/LtRFHqs/location.png" alt=""></img><div className="in2"><span>Hello</span><br /><address>select your address</address></div></Link></li>
-                <li className="N3">
-                    <SearchBar setBorder={setBorder} select={select} catagory={props.catagory} setBorder1={setBorder1} input1={input1}/>
-                </li >
-
-                {conditionalHeader()}
-
-                <li className="N6" >
-                    <div onClick={handleViewBooking}><div className="in2"><small>Returns</small><br /><span>& Orders</span></div></div>
-                </li>
-                <li className="N7">
-                    <div onClick={handleGoToCart}>
-                        <img src="https://i.ibb.co/vkfh4k5/outline-shopping-cart-white-24dp.png" alt="cart_img"></img><span>{total}</span><div className="cart">Cart</div>
+            <nav
+                className="navbar navbar-expand-xl navbar-dark bg-dark"
+                aria-label="Third navbar example"
+            >
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="/">
+                        <div className="N1">
+                            <img src="https://i.ibb.co/RQ8X7W6/amazon-logo.png" alt="" />
+                            .in
+                        </div>
+                    </Link>
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample03"
+                        aria-controls="navbarsExample03"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon" />
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarsExample03">
+                        <ul className="navbar-nav me-auto mb-2 mb-sm-0">
+                            <li className="nav-item N2">
+                                <Link className="nav-link active" aria-current="page" to="">
+                                    <img src="https://i.ibb.co/LtRFHqs/location.png" alt="" />
+                                    <div className="in2">
+                                        <span>Hello</span>
+                                        <br />
+                                        <address>select your address</address>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <SearchBar setBorder={setBorder} select={select} catagory={props.catagory} setBorder1={setBorder1} input1={input1} />
+                            </li>
+                            {conditionalHeader()}
+                            <li className="nav-item">
+                                <a className="" href="/register" tabIndex={-1} aria-disabled="true">
+                                    <button
+                                        className="logout-button pt-2 pb-1"
+                                        onClick={handleViewBooking}
+                                    >
+                                        Returns 
+                                        <br />
+                                        &nbsp;&nbsp;&nbsp;&amp; Orders
+                                    </button>
+                                </a>
+                            </li>
+                            <li className="nav-item N7">
+                                <div onclick={handleGoToCart} className="">
+                                    <img
+                                        src="https://i.ibb.co/vkfh4k5/outline-shopping-cart-white-24dp.png"
+                                        alt="cart_img"
+                                    />
+                                    <span>0</span>
+                                    <div className="cart">Cart</div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </li>
-            </ul>
+                </div>
+            </nav>
         </>
     )
 }

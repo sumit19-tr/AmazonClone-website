@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Nav1.css';
 
 import Nav1Display from './Nav1Display';
 const curl = "https://amazon-clone-restapi-production.up.railway.app/catagory";

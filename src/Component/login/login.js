@@ -76,7 +76,7 @@ class login extends Component {
                                 Login
                             </button>
                             <Link to='/register'>
-                                <button type="button" className="btn btn-register btn-block">
+                                <button type="button" className="btn btn-register btn-block fs-6 fw-bold">
                                     Create an Account
                                 </button>
                             </Link>

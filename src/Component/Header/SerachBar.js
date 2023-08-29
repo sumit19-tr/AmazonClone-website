@@ -55,10 +55,18 @@ function SearchBar(props) {
     const handleChange = (value) => {
         setInput(value)
         fetchAllProductData(value)
-        setHideList(
-            { display: 'block' }
-        )
-    }
+
+        if(value === ""){
+            setHideList(
+                { display: 'none' }
+            )
+        }
+        else{
+            setHideList(
+                { display: 'block' }
+            )            
+        }        
+    }    
 
     const handleChange2 = async (event) => {
         const selectedValue = event.target.value;
@@ -77,16 +85,23 @@ function SearchBar(props) {
 
     return (
         <>
-            <div className='searchBar'>
-                <select value={selectedOption.toString()} onChange={(e) => handleChange2(e)} name="category" onMouseUp={props.setBorder} style={props.select}>
-                    <option value='0'>{selectedOptionName}</option>
-                    {props.catagory}
-                </select>
-                <input type="text" className="input1" onMouseUp={props.setBorder1} style={props.input1}
-                    value={input} placeholder={`search in ${selectedOptionName}`} onChange={(e) => handleChange(e.target.value)} />
-                <button type="submit" className="btn1"><i className="fa fa-search "></i></button>
-                <div className='searchBarCopy' style={hideList}>
-                    <SearchBarResultList result={result} hideList={hideList} />
+
+            <div className="N3">
+                <div className="searchBar">
+                    <select value={selectedOption.toString()} onChange={(e) => handleChange2(e)} name="category" onMouseUp={props.setBorder} style={props.select}>
+                        <option value='0'>{selectedOptionName}</option>
+                        {props.catagory}
+                    </select>
+                    <input
+                        type="text" className="input1" onMouseUp={props.setBorder1} style={props.input1}
+                        value={input} placeholder={`search in ${selectedOptionName}`} onChange={(e) => handleChange(e.target.value)}
+                    />
+                    <button type="submit" className="btn1">
+                        <i className="fa fa-search" />
+                    </button>
+                    <div className="searchBarCopy" style={hideList}>
+                        <SearchBarResultList result={result} hideList={hideList} />
+                    </div>
                 </div>
             </div>
         </>

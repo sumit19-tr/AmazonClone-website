@@ -9,7 +9,7 @@
     color: aliceblue;
     
 }
-.backtotop button:hover
+.backtotop:hover
 {
     opacity: 0.9;
 }

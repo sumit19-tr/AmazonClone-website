@@ -3,6 +3,7 @@ import './AddToCart.css';
 import axios from "axios";
 import Header from "../Header/Header";
 import MyContext from "../MyContext";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 
 const curl = `https://amazonclone-loginapi-production.up.railway.app/api/auth/cart-items/${sessionStorage.getItem("userInfo")}`;
@@ -41,18 +42,18 @@ class AddToCart extends Component {
             this.setState({ updateQtyCount: updateQtyCount1 });
         }
     }
-    
 
 
-    handleChange = async (id,event) =>{
+
+    handleChange = async (id, event) => {
         const updatedQuantity = event.target.value || 1;
         let response = await axios.put(uQurl, { "Quantity": updatedQuantity, "productId": id });
         console.log("handleUpdateQuantity>>>", JSON.stringify(response.data));
         const updateQtyCount1 = updatedQuantity;
         this.setState({ updateQtyCount: updateQtyCount1 });
-        
+
     }
-   
+
 
     handleRemove = async (Rpid) => {
         let response = await axios.delete(`${durl}/${Rpid}`);
@@ -70,79 +71,78 @@ class AddToCart extends Component {
                 return cartItems.map((item) => {
                     return (
                         <>
-                            <div className="row">
-                                <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
-                                    <div
-                                        className="bg-image hover-overlay hover-zoom ripple rounded"
-                                        data-mdb-ripple-color="light"
-                                    >
-                                        <img
-                                            src={item.Image}
-                                            className="w-100 img-responsive"
-                                            alt={item.product_name}
-                                        />
-                                        <a href="#!">
-                                            <div
-                                                className="mask"
-                                                style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
-                                    <p>
-                                        <strong>{item.product_name}</strong>
-                                    </p>
-                                    <p>Color: {item.Color}</p>
-                                    <button
-                                        type="button"
-                                        className="btn btn-danger btn-sm me-1 "
-                                        data-mdb-toggle="tooltip"
-                                        title="Remove item"
-                                        onClick={() => this.handleRemove(item.productId)}
-                                    >
-                                        <i className="fas fa-trash" />
-                                    </button>
-                                    
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                                  
-                                    <div className="d-flex mb-4" style={{ maxWidth: 300 }}>
-                                        <button
-                                            className="btn btn-warning px-3 me-2 btn-plus-minus"
-                                            onClick={() => { this.handleQuantityDecre(item.productId, item.Quantity) }}
+                            <div key={item._id}>
+                                <div className="row">
+                                    <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                                        <div
+                                            className="bg-image hover-overlay hover-zoom ripple rounded"
+                                            data-mdb-ripple-color="light"
                                         >
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-                                        <div className="form-outline">
-                                            <input
-                                                id="form1"
-                                                min={0}
-                                                name="quantity"
-                                                value={item.Quantity}
-                                                onChange={(event) => this.handleChange(item.productId,event)}
-                                                type="number"
-                                                className="form-control"
+                                            <img
+                                                src={item.Image}
+                                                className="w-100 img-responsive"
+                                                alt={item.product_name}
                                             />
-                                            <label className="form-label" htmlFor="form1">
-                                                Quantity
-                                            </label>
+                                            <Link to="">
+                                                <div
+                                                    className="mask"
+                                                    style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
+                                                />
+                                            </Link>
                                         </div>
-                                        <button
-                                            className="btn btn-warning px-3 ms-2 btn-plus-minus"
-                                            onClick={() => { this.handleQuantityIncre(item.productId, item.Quantity) }}>
-                                            <i class="fas fa-plus"></i>
-                                        </button>
                                     </div>
-                                    
-                                    <p className="text-start text-md-center">
-                                        <strong>₹{item.Price.toLocaleString('en-IN')}</strong>
-                                    </p>
-                                   
+                                    <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                                        <p>
+                                            <strong>{item.product_name}</strong>
+                                        </p>
+                                        <p>Color: {item.Color}</p>
+                                        <button
+                                            type="button"
+                                            className="btn btn-danger btn-sm me-1 "
+                                            data-mdb-toggle="tooltip"
+                                            title="Remove item"
+                                            onClick={() => this.handleRemove(item.productId)}
+                                        >
+                                            <i className="fas fa-trash"/>
+                                        </button>
+
+                                    </div>
+                                    <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
+
+                                        <div className="d-flex mb-4" style={{ maxWidth: 300 }}>
+                                            <button
+                                                className="btn btn-warning px-3 me-2 btn-plus-minus"
+                                                onClick={() => { this.handleQuantityDecre(item.productId, item.Quantity) }}
+                                            >
+                                                <i className="fas fa-minus"></i>
+                                            </button>
+                                            <div className="form-outline">
+                                                <input
+                                                    id="form1"
+                                                    min={0}
+                                                    name="quantity"
+                                                    value={item.Quantity}
+                                                    onChange={(event) => this.handleChange(item.productId, event)}
+                                                    type="number"
+                                                    className="form-control"
+                                                />
+                                                <label className="form-label" htmlFor="form1">
+                                                    Quantity
+                                                </label>
+                                            </div>
+                                            <button
+                                                className="btn btn-warning px-3 ms-2 btn-plus-minus"
+                                                onClick={() => { this.handleQuantityIncre(item.productId, item.Quantity) }}>
+                                                <i className="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                        <p className="text-start text-md-center">
+                                            <strong>₹{item.Price.toLocaleString('en-IN')}</strong>
+                                        </p>
+                                    </div>
                                 </div>
+                                <hr className="my-4"/>
                             </div>
-                           
-                            <hr className="my-4" />
                         </>
                     )
                 })
@@ -179,7 +179,7 @@ class AddToCart extends Component {
                 <MyContext.Provider value={this.state.total_items}>
                     <Header />
                 </MyContext.Provider>
-              
+
 
                 <section className="h-100 gradient-custom">
                     <div className="container py-5">
@@ -190,7 +190,7 @@ class AddToCart extends Component {
                                         <h5 className="mb-0">Shopping Cart - {this.state.total_items} items</h5>
                                     </div>
                                     <div className="card-body">
-                                        {this.displayAddToCart(this.state.cartItems)}                                        
+                                        {this.displayAddToCart(this.state.cartItems)}
                                     </div>
                                 </div>
                             </div>
@@ -202,7 +202,7 @@ class AddToCart extends Component {
                                     <div className="card-body">
                                         <ul className="list-group list-group-flush">
                                             <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                            Subtotal ({this.state.total_items} item):
+                                                Subtotal ({this.state.total_items} item):
                                                 <span>₹{this.state.total}.00</span>
                                             </li>
                                             <li className="list-group-item d-flex justify-content-between align-items-center px-0">

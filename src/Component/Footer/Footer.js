@@ -11,7 +11,12 @@ const Footer = () => {
     }
     return (
         <>
-            <footer className="bg-dark text-center text-lg-start text-white mt-5">
+            <div className="p-3 bg-dark border border-white border-1 text-white btn w-100 backtotop" onClick={handleScroll}>
+                <center>
+                    Back to top
+                </center>
+            </div>
+            <footer className="bg-dark text-center text-lg-start text-white">
                 <div className="container p-4">
                     <div className="row">
                         <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
@@ -31,11 +36,6 @@ const Footer = () => {
                 </div>
             </footer>
 
-            <div className="backtotop c3">
-                <center>
-                    <button onClick={handleScroll}>Back to top</button>
-                </center>
-            </div>
 
             <footer className="footer bg-dark text-center text-lg-start">
                 <div className="container p-4">
