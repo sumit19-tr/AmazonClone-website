@@ -10,16 +10,18 @@ const url = "https://amazonclone-loginapi-production.up.railway.app/api/auth/use
 const Nav1Display = (props) => {
 
     const data = useContext(MyContext)
-    const [total, setTotal] = useState(0);
+    // const [total,setTotal] = useState(0);
     const [userData, setUserData] = useState("");
+
+
 
 
     useEffect(() => {
         const fetchNoOfItemsInCart = async () => {
-            const response = await axios.get(`${curl}/${sessionStorage.getItem("userInfo", data)}`);
-            const cartItems = response.data.data;
-            const total_items = cartItems.length;
-            setTotal(total_items);
+            await axios.get(`${curl}/${sessionStorage.getItem("userInfo", data)}`);
+            // const cartItems = response.data.data;
+            // const total_items = cartItems.length;
+            // setTotal(total_items);
         }
         fetchNoOfItemsInCart();
     }, [data])
