@@ -17,7 +17,7 @@ const Routing = () => {
         <>
             <div>
                 <BrowserRouter>
-                    <Route exact path="/" component={Home} />
+                    <Route exact path="/" component={Home}/>
                     <Route path='/login' component={login}/>
                     <Route path='/register' component={register}/>
                     <Route path="/products/:category_id" component={Product} />

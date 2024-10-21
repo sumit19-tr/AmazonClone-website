@@ -33,7 +33,7 @@ function SearchBar(props) {
         }
 
         if (category_id === "0") {
-            let response = await axios.get("https://amazon-clone-restapi-production.up.railway.app/product");
+            let response = await axios.get("https://amazon-clone-restapi.onrender.com/product");
 
             let data = response.data;
             const result = data.filter((user) => {
@@ -42,7 +42,7 @@ function SearchBar(props) {
             setResult(result);
         }
         else {
-            let response = await axios.get(`https://amazon-clone-restapi-production.up.railway.app/products/${category_id}`);
+            let response = await axios.get(`https://amazon-clone-restapi.onrender.com/products/${category_id}`);
 
             let data = response.data;
             const result1 = data.filter((user) => {
@@ -76,7 +76,7 @@ function SearchBar(props) {
             setSelectedOptionName("All");
         }
         else {
-            let response = await axios.get(`https://amazon-clone-restapi-production.up.railway.app/products/${selectedValue}`);
+            let response = await axios.get(`https://amazon-clone-restapi.onrender.com/products/${selectedValue}`);
             let data = response.data[0];
             const result = data.category;
             setSelectedOptionName(result);

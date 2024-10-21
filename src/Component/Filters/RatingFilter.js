@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 
-const url = "https://amazon-clone-restapi-production.up.railway.app/filter";
+const url = "https://amazon-clone-restapi.onrender.com/filter";
 
 class RatingFilter extends Component{
 

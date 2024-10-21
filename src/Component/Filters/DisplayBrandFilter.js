@@ -7,7 +7,7 @@ const DisplayBrandFilter = (props) => {
             if (brandList.length > 0) {
                 return brandList.map((item) => {
                     return (
-                        <li>
+                        <li key={item._id}>
                             <input 
                             type="radio" name="radio" id={item.brand_id} value={item.brand_id} key={item.brand_id} />
                             <label htmlFor={item.brand_id} className="fs-5 ms-2 text-capitalize Mouse-hover">{item.brand_name}</label>

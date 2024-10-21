@@ -17,9 +17,6 @@ const Nav2Display = (props) => {
         }
     }
 
-
-
-
     const changeMode = () => {
         return (<></>)
     }

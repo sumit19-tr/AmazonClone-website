@@ -15,7 +15,7 @@ function DisplayOrder(props) {
                         <td>Rs. {item.cost}</td>
                         <td>{item.date}</td>
                         <td>{item.status}</td>
-                        <td>{item.bank_name}</td>
+                        <td>{item.payment_id}</td>
                     </tr>
                 )
             })
@@ -36,7 +36,7 @@ function DisplayOrder(props) {
                             <th>cost</th>
                             <th>Date</th>
                             <th>status</th>
-                            <th>Bank Name</th>
+                            <th>PAYMENTID</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -7,8 +7,8 @@ import DiscountsFilter from "../Filters/DiscountsFilter";
 import RatingFilter from "../Filters/RatingFilter";
 import DisplayProduct from "./displayProduct";
 import Header from "../Header/Header";
-const curl = 'https://amazon-clone-restapi-production.up.railway.app/products';
-const curl2 = 'https://amazon-clone-restapi-production.up.railway.app/catagory';
+const curl = 'https://amazon-clone-restapi.onrender.com/products';
+const curl2 = 'https://amazon-clone-restapi.onrender.com/catagory';
 
 class Product extends Component {
 

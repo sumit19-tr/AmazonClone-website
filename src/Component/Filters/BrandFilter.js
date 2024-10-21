@@ -2,8 +2,8 @@ import axios from "axios";
 import React, { Component } from "react";
 import DisplayBrandFilter from "./DisplayBrandFilter";
 
-const url = "https://amazon-clone-restapi-production.up.railway.app/filter";
-const curl = 'https://amazon-clone-restapi-production.up.railway.app/catagory'
+const url = "https://amazon-clone-restapi.onrender.com/filter";
+const curl = 'https://amazon-clone-restapi.onrender.com/catagory'
 
 
 class BrandFilter extends Component {

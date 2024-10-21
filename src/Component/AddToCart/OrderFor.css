@@ -10,3 +10,7 @@
    height:200px;
    width:100%;
 }
+
+.btn-danger, .btn-warning{
+    margin-bottom: 14px;
+}

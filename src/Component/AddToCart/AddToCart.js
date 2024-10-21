@@ -5,10 +5,9 @@ import Header from "../Header/Header";
 import MyContext from "../MyContext";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
-
-const curl = `https://amazonclone-loginapi-production.up.railway.app/api/auth/cart-items/${sessionStorage.getItem("userInfo")}`;
-const durl = 'https://amazonclone-loginapi-production.up.railway.app/api/auth/removeItems';
-const uQurl = 'https://amazonclone-loginapi-production.up.railway.app/api/auth/updateQuantity';
+const curl = `https://amazonclone-loginapi.onrender.com/api/auth/cart-items/${sessionStorage.getItem("userInfo")}`;
+const durl = 'https://amazonclone-loginapi.onrender.com/api/auth/removeItems';
+const uQurl = 'https://amazonclone-loginapi.onrender.com/api/auth/updateQuantity';
 
 class AddToCart extends Component {
     constructor(props) {
@@ -24,8 +23,8 @@ class AddToCart extends Component {
 
     handleQuantityIncre = async (id, Quantity) => {
         const updatedQuantity = Quantity + 1;
-        let response = await axios.put(uQurl, { "Quantity": updatedQuantity, "productId": id });
-        console.log("handleUpdateQuantity>>>", JSON.stringify(response.data));
+        await axios.put(uQurl, { "Quantity": updatedQuantity, "productId": id });
+        //console.log("handleUpdateQuantity>>>", JSON.stringify(response.data));
         const updateQtyCount1 = this.state.updateQtyCount + 1;
         this.setState({ updateQtyCount: updateQtyCount1 });
     }
@@ -36,8 +35,8 @@ class AddToCart extends Component {
         }
         else {
             const updatedQuantity = Quantity - 1;
-            let response = await axios.put(uQurl, { "Quantity": updatedQuantity, "productId": id });
-            console.log("handleUpdateQuantity>>>", JSON.stringify(response.data));
+            await axios.put(uQurl, { "Quantity": updatedQuantity, "productId": id });
+            //console.log("handleUpdateQuantity>>>", JSON.stringify(response.data));
             const updateQtyCount1 = this.state.updateQtyCount + 1;
             this.setState({ updateQtyCount: updateQtyCount1 });
         }
@@ -47,8 +46,8 @@ class AddToCart extends Component {
 
     handleChange = async (id, event) => {
         const updatedQuantity = event.target.value || 1;
-        let response = await axios.put(uQurl, { "Quantity": updatedQuantity, "productId": id });
-        console.log("handleUpdateQuantity>>>", JSON.stringify(response.data));
+        await axios.put(uQurl, { "Quantity": updatedQuantity, "productId": id });
+        //console.log("handleUpdateQuantity>>>", JSON.stringify(response.data));
         const updateQtyCount1 = updatedQuantity;
         this.setState({ updateQtyCount: updateQtyCount1 });
 
@@ -63,16 +62,28 @@ class AddToCart extends Component {
         const total = cartItems.reduce((acc, item) => acc + item.Price, 0);
         const total_items = cartItems.length;
         this.setState({ cartItems, total, total_items });
+        
     }
 
     displayAddToCart = (cartItems) => {
+
+        // //console.log(this.state.cartItems+" ");
+        // //console.log(this.state.total+" ");
+        // //console.log(this.state.total_items+" ");
+        
+        sessionStorage.setItem('totalItems',this.state.total_items);
+
+        //console.log("sessionStorage.getItem('totalItems') "+sessionStorage.getItem('totalItems'));
+
+
+
         if (cartItems) {
             if (cartItems.length > 0) {
                 return cartItems.map((item) => {
                     return (
                         <>
-                            <div key={item._id}>
-                                <div className="row">
+                            <div key={item.id}>
+                                <div key={item.id} className="row">
                                     <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
                                         <div
                                             className="bg-image hover-overlay hover-zoom ripple rounded"
@@ -172,8 +183,8 @@ class AddToCart extends Component {
 
     render() {
 
-        console.log("this.state.total " + this.state.total);
-        console.log("this.state.updateQtyCount ", this.state.updateQtyCount);
+        //console.log("this.state.total " + this.state.total);
+        //console.log("this.state.updateQtyCount ", this.state.updateQtyCount);
         return (
             <>
                 <MyContext.Provider value={this.state.total_items}>
@@ -187,7 +198,7 @@ class AddToCart extends Component {
                             <div className="col-md-8">
                                 <div className="card mb-4">
                                     <div className="card-header py-3">
-                                        <h5 className="mb-0">Shopping Cart - {this.state.total_items} items</h5>
+                                        <h5 className="mb-0" >Shopping Cart - {this.state.total_items} items</h5>
                                     </div>
                                     <div className="card-body">
                                         {this.displayAddToCart(this.state.cartItems)}
@@ -229,8 +240,6 @@ class AddToCart extends Component {
                         </div>
                     </div>
                 </section>
-
-
             </>
         )
     }

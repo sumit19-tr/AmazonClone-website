@@ -3,7 +3,7 @@ import './login.css';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import Header from '../Header/Header';
 
-const lurl="https://amazonclone-loginapi-production.up.railway.app/api/auth/login";
+const lurl="https://amazonclone-loginapi.onrender.com/api/auth/login";
 
 class login extends Component {
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Nav1Display from './Nav1Display';
-const curl = "https://amazon-clone-restapi-production.up.railway.app/catagory";
+const curl = "https://amazon-clone-restapi.onrender.com/catagory";
 
 class Nav1 extends Component {
     constructor(props) {

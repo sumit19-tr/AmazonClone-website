@@ -4,17 +4,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useHistory } from 'react-router-dom';
 import MyContext from "../MyContext";
 import SearchBar from "./SerachBar";
-const curl = 'https://amazonclone-loginapi-production.up.railway.app/api/auth/cart-items';
-const url = "https://amazonclone-loginapi-production.up.railway.app/api/auth/userinfo";
+const curl = 'https://amazonclone-loginapi.onrender.com/api/auth/cart-items';
+const url = "https://amazonclone-loginapi.onrender.com/api/auth/userinfo";
 
 const Nav1Display = (props) => {
 
     const data = useContext(MyContext)
     // const [total,setTotal] = useState(0);
     const [userData, setUserData] = useState("");
-
-
-
 
     useEffect(() => {
         const fetchNoOfItemsInCart = async () => {
@@ -25,7 +22,6 @@ const Nav1Display = (props) => {
         }
         fetchNoOfItemsInCart();
     }, [data])
-
 
     useEffect(() => {
         fetch(url, {
@@ -118,7 +114,7 @@ const Nav1Display = (props) => {
             history.push('/login');
         }
         else {
-            history.push(`/cart`);
+            history.push('/cart');
         }
     }
 
@@ -127,7 +123,7 @@ const Nav1Display = (props) => {
             history.push('/login');
         }
         else {
-            history.push(`/viewBooking`);
+            history.push('/viewBooking');
         }
     }
 
@@ -210,7 +206,7 @@ const Nav1Display = (props) => {
                             </li>
                             {conditionalHeader()}
                             <li className="nav-item">
-                                <a className="" href="/register" tabIndex={-1} aria-disabled="true">
+                                <a tabIndex={-1} aria-disabled="true">
                                     <button
                                         className="logout-button pt-2 pb-1"
                                         onClick={handleViewBooking}
@@ -222,12 +218,12 @@ const Nav1Display = (props) => {
                                 </a>
                             </li>
                             <li className="nav-item N7">
-                                <div onclick={handleGoToCart} className="">
+                                <div onClick={handleGoToCart} className="">
                                     <img
                                         src="https://i.ibb.co/vkfh4k5/outline-shopping-cart-white-24dp.png"
                                         alt="cart_img"
                                     />
-                                    <span>0</span>
+                                    <span>{sessionStorage.getItem("totalItems")}</span>
                                     <div className="cart">Cart</div>
                                 </div>
                             </li>

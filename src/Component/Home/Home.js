@@ -7,7 +7,7 @@ import ProductSection from './ProductSection';
 import Header from '../Header/Header';
 import axios from 'axios';
 
-const hurl = "https://amazon-clone-restapi-production.up.railway.app/homepage"
+const hurl = "https://amazon-clone-restapi.onrender.com/homepage"
 const section1 = "Top picks for Mobiles";
 const section2 = "Top rated";
 const section3 = "MenFashionDisc5080";
@@ -35,9 +35,9 @@ const Home = () => {
         const productIds3 = res3.data.map(item => item.productId);
 
 
-        const resdata = await axios.get(`https://amazon-clone-restapi-production.up.railway.app/products?product_ids=${productIds}`)
-        const resdata2 = await axios.get(`https://amazon-clone-restapi-production.up.railway.app/products?product_ids=${productIds2}`)
-        const resdata3 = await axios.get(`https://amazon-clone-restapi-production.up.railway.app/products?product_ids=${productIds3}`)
+        const resdata = await axios.get(`https://amazon-clone-restapi.onrender.com/products?product_ids=${productIds}`)
+        const resdata2 = await axios.get(`https://amazon-clone-restapi.onrender.com/products?product_ids=${productIds2}`)
+        const resdata3 = await axios.get(`https://amazon-clone-restapi.onrender.com/products?product_ids=${productIds3}`)
 
         setTopPicksFromMobiles(resdata.data);
         setToprated(resdata2.data);
@@ -51,7 +51,7 @@ const Home = () => {
         const productIds = res4.data.map(item => item.productId);
 
 
-        const resdata4 = await axios.get(`https://amazon-clone-restapi-production.up.railway.app/products?product_ids=${productIds}`)
+        const resdata4 = await axios.get(`https://amazon-clone-restapi.onrender.com/products?product_ids=${productIds}`)
 
         setTodaysDeals(resdata4.data);
     }
@@ -63,7 +63,7 @@ const Home = () => {
         const productIds = res5.data.map(item => item.productId);
 
 
-        const resdata5 = await axios.get(`https://amazon-clone-restapi-production.up.railway.app/products?product_ids=${productIds}`)
+        const resdata5 = await axios.get(`https://amazon-clone-restapi.onrender.com/products?product_ids=${productIds}`)
 
         setbestseller(resdata5.data);
     }
@@ -75,7 +75,7 @@ const Home = () => {
         const productIds = res6.data.map(item => item.productId);
 
 
-        const resdata6 = await axios.get(`https://amazon-clone-restapi-production.up.railway.app/products?product_ids=${productIds}`)
+        const resdata6 = await axios.get(`https://amazon-clone-restapi.onrender.com/products?product_ids=${productIds}`)
 
         setSportsandfitness(resdata6.data);
     }

@@ -5,7 +5,7 @@ function SearchBarResult({ result, hideList }) {
 
     const history = useHistory();
     const handleClick = (value) => {
-        console.log("handleClick value", value);
+        //console.log("handleClick value", value);
         history.push(`/details?id=${result.productId}`)
     }
 

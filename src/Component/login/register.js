@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Header from '../Header/Header';
 import './register.css'
 
-const rurl = "https://amazonclone-loginapi-production.up.railway.app/api/auth/register";
+const rurl = "https://amazonclone-loginapi.onrender.com/api/auth/register";
 
 class Register extends Component {
   constructor() {
@@ -73,7 +73,7 @@ class Register extends Component {
                 this.props.history.push('/login');
             },3000)      ;      
         }
-        console.log('data', data);
+        //console.log('data', data);
       })
   }
 

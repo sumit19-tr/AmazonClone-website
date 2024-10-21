@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import Nav2Display from "./Nav2Display";
 import "./Nav2.css";
 
-const curl = 'https://amazon-clone-restapi-production.up.railway.app/catagory';
+const curl = 'https://amazon-clone-restapi.onrender.com/catagory';
 
 const Nav2 = () => {
   const [catagory, setCatag] = useState('');

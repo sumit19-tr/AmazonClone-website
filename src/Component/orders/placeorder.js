@@ -50,7 +50,7 @@ class placeorder extends Component {
     }
 
     render() {
-        console.log('this.state.productL', this.state.productL);
+        //console.log('this.state.productL', this.state.productL);
         return (
             <>
                 <Header/>

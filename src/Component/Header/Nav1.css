@@ -888,6 +888,7 @@ select:focus {
     border: 1px solid transparent;
     width: 88px;
     height: 49px;
+    cursor: pointer;
     /* margin: 2px 0px 0px 1136px; */
     /* position: absolute;*/
 }
