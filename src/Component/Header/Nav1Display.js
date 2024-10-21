@@ -206,7 +206,7 @@ const Nav1Display = (props) => {
                             </li>
                             {conditionalHeader()}
                             <li className="nav-item">
-                                <a tabIndex={-1} aria-disabled="true">
+                                <Link tabIndex={-1} aria-disabled="true">
                                     <button
                                         className="logout-button pt-2 pb-1"
                                         onClick={handleViewBooking}
@@ -215,7 +215,7 @@ const Nav1Display = (props) => {
                                         <br />
                                         &nbsp;&nbsp;&nbsp;&amp; Orders
                                     </button>
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item N7">
                                 <div onClick={handleGoToCart} className="">
